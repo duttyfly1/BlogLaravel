@@ -12,13 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('home');
 });
 Route::get('/list', function () {
-    return view('pages.list');
+    return view('list');
 });
 Route::get('/add', function () {
-    return view('pages.add');
+    return view('add');
 });
 
 Route::get('/list', 'ProjectsController@getProjects')->name('project.list');
