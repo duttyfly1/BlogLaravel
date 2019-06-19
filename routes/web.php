@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
+    return view('pages.home');
+});
+Route::get('/list', function () {
     return view('pages.list');
 });
 Route::get('/add', function () {
