@@ -17,7 +17,12 @@ Route::get('/', function () {
 Route::get('/add', function () {
     return view('pages.add');
 });
-Route::get('/edit', function () {
-    return view('pages.edit');
-});
 
+Route::get('/list', 'ProjectsController@getProjects')->name('project.list');
+
+Route::get('/edit/{project}', 'ProjectsController@show')->name('project.show');
+Route::post('/edit/{project}', 'ProjectsController@update')->name('project.edit');
+
+Route::post('/add', 'ProjectsController@store')->name('project.add');
+
+Route::get('/delete/{project}', 'ProjectsController@delete')->name('project.delete');
